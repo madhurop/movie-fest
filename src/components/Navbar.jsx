@@ -61,8 +61,8 @@ function Navbar() {
                     transition={{ duration: 0.4 }}
                 >
                     <Link to="/" className="logo flex flex-col justify-center items-center m-7 gap-2" onClick={() => setActivemobile(!activemobile)}>
-                        <img src={logo} alt="logo" className="w-24" />
-                        <h1 className="text-gray-400/70 font-bold text-2xl text-center">BlueBird Movies</h1>
+                        <img src="https://tse3.mm.bing.net/th?id=OIG4.5zl0ZJmGPxLbtNhx_JSz&w=270&h=270&c=6&r=0&o=5&pid=ImgGn" alt="logo" className="w-24" />
+                        <h1 className="text-gray-400/70 font-bold text-2xl text-center">MovieFest</h1>
                     </Link>
                 </motion.div>
 

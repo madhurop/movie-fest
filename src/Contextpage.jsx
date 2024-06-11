@@ -25,7 +25,8 @@ export function MovieProvider({ children }) {
   const [user, setUser] = useAuthState(auth)//=======> firebase custom hooks state
   const navigate = useNavigate();// =====> navigate page
 
-  const APIKEY = import.meta.env.VITE_API_KEY;
+
+  const APIKEY = "ee6c8df445812449821a3650d50df85e"
 
 
   useEffect(() => {
@@ -40,6 +41,7 @@ export function MovieProvider({ children }) {
       `https://api.themoviedb.org/3/discover/movie?with_genres=${activegenre}&api_key=${APIKEY}&with_origin_country=IN&page=${page}`
     );
     const filteredGenre = await data.json();
+    console.log(filteredGenre)
     setMovies(movies.concat(filteredGenre.results)); // Concat new movies with previous movies, on genre change movies are reset to [] so that only movies of new genre will appear, check out useEffect on top for more information.
     setTotalPage(filteredGenre.total_pages);
     setLoader(false);
